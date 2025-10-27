@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Materiales Discretos — Transistor BJT NPN</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Materiales Discretos</h1>
+      <p class="tag">Componentes: Transistor BJT NPN</p>
+    </div>
+
+    <nav class="site-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#componentes">Componentes</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+   
+    <section id="componente1" class="componente1" aria-labelledby="titulo-bjt">
+      <div class="subtitle">
+        <h2 id="titulo-bjt">Transistor BJT NPN — Ej. BC547 / 2N2222</h2>
+        <p class="lead">Dispositivo semiconductor usado como conmutador y amplificador.</p>
+      </div>
+
+      <div id="section-1" class="section-1">
+        <figure class="image" role="group" aria-label="Imagen del transistor BJT NPN">
+          
+          <img src="./img/bc547vs2n2222.gif" alt="Fotografía de un transistor BJT NPN (BC547 / 2N2222)">
+          <figcaption class="figcap">Transistor BJT NPN — encapsulado TO-92</figcaption>
+        </figure>
+
+        <article class="description" aria-labelledby="titulo-descripcion">
+          <h3 id="titulo-descripcion">¿Qué es y para qué sirve?</h3>
+          <p>
+            El <strong>BJT NPN</strong> es un transistor de unión bipolar que permite controlar
+            una corriente mayor entre colector y emisor mediante una corriente más pequeña
+            aplicada a la base. Se usa frecuentemente como <em>conmutador</em> (encendido/apagado)
+            y como <em>amplificador</em> en etapas de señal.
+          </p>
+
+          <h4>Características clave</h4>
+          <ul>
+            <li>Terminales: <strong>Base (B)</strong>, <strong>Colector (C)</strong>, <strong>Emisor (E)</strong>.</li>
+            <li>Usos típicos: conmutación digital, preamplificadores, drivers de relés pequeños.</li>
+            <li>Ejemplos comunes: <em>BC547</em>, <em>2N2222</em> — ideales para proyectos educativos.</li>
+          </ul>
+
+          <h4>Notas prácticas</h4>
+          <p class="small">
+            Al usarlo como conmutador, se recomienda calcular la resistencia de base para
+            asegurar que el transistor entre en saturación cuando deseado. En montajes reales,
+            proteger con una resistencia y considerar la disipación de potencia.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Puedes duplicar / añadir más secciones de componentes aquí -->
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 — Curso de Electrónica • Materiales Discretos</p>
+  </footer>
+</body>
+</html>
