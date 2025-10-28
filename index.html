@@ -3,76 +3,196 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Materiales Discretos — Transistor BJT NPN</title>
+  <title>Materiales Discretos — Curso de Electrónica</title>
 
-  
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-  
+  <!-- CSS -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header" role="banner">
     <div class="brand">
       <h1>Materiales Discretos</h1>
-      <p class="tag">Componentes: Transistor BJT NPN</p>
+      <p class="tag">Electrónica — Componentes: BJT NPN • LED • MOSFET N</p>
     </div>
 
-    <nav class="site-nav" aria-label="Navegación principal">
+    <nav class="site-nav" role="navigation" aria-label="Navegación principal">
       <ul>
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#componentes">Componentes</a></li>
+        <li><a href="#glosario">Glosario</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-   
-    <section id="componente1" class="componente1" aria-labelledby="titulo-bjt">
-      <div class="subtitle">
-        <h2 id="titulo-bjt">Transistor BJT NPN — Ej. BC547 / 2N2222</h2>
-        <p class="lead">Dispositivo semiconductor usado como conmutador y amplificador.</p>
-      </div>
-
-      <div id="section-1" class="section-1">
-        <figure class="image" role="group" aria-label="Imagen del transistor BJT NPN">
-          
-          <img src="./img/bc547vs2n2222.gif" alt="Fotografía de un transistor BJT NPN (BC547 / 2N2222)">
-          <figcaption class="figcap">Transistor BJT NPN — encapsulado TO-92</figcaption>
-        </figure>
-
-        <article class="description" aria-labelledby="titulo-descripcion">
-          <h3 id="titulo-descripcion">¿Qué es y para qué sirve?</h3>
-          <p>
-            El <strong>BJT NPN</strong> es un transistor de unión bipolar que permite controlar
-            una corriente mayor entre colector y emisor mediante una corriente más pequeña
-            aplicada a la base. Se usa frecuentemente como <em>conmutador</em> (encendido/apagado)
-            y como <em>amplificador</em> en etapas de señal.
-          </p>
-
-          <h4>Características clave</h4>
-          <ul>
-            <li>Terminales: <strong>Base (B)</strong>, <strong>Colector (C)</strong>, <strong>Emisor (E)</strong>.</li>
-            <li>Usos típicos: conmutación digital, preamplificadores, drivers de relés pequeños.</li>
-            <li>Ejemplos comunes: <em>BC547</em>, <em>2N2222</em> — ideales para proyectos educativos.</li>
-          </ul>
-
-          <h4>Notas prácticas</h4>
-          <p class="small">
-            Al usarlo como conmutador, se recomienda calcular la resistencia de base para
-            asegurar que el transistor entre en saturación cuando deseado. En montajes reales,
-            proteger con una resistencia y considerar la disipación de potencia.
-          </p>
-        </article>
+    <!-- HERO -->
+    <section id="inicio" class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <h2 id="hero-title">Materiales Discretos en Electrónica</h2>
+        <p class="hero-sub">Pequeños componentes, grandes funciones. Introducción a BJT, LED y MOSFET en aplicaciones de laboratorio y proyectos.</p>
       </div>
     </section>
 
-    <!-- Puedes duplicar / añadir más secciones de componentes aquí -->
+    <!-- COMPONENTES: BJT (bloque grande con imagen) -->
+    <section id="componentes" class="section componentes" aria-labelledby="componentes-title">
+      <div class="container">
+        <div class="subtitle" id="componentes-title">
+          <h2>Componentes destacados</h2>
+          <p class="lead">Fichas técnicas y notas prácticas para cada material discreto.</p>
+        </div>
+
+        <!-- BJT - BLOCK (imagen + descripción) -->
+        <section id="componente-bjt" class="componente1" aria-labelledby="titulo-bjt">
+          <div class="subtitle-bjt">
+            <h3 id="titulo-bjt">Transistor BJT NPN — BC547 / 2N2222</h3>
+            <p class="lead small">Dispositivo semiconductor usado como conmutador y amplificador.</p>
+          </div>
+
+          <div class="section-1">
+            <figure class="image" role="group" aria-label="Imagen transistor BJT NPN">
+              <img src="./img/bc547vs2n2222.gif" alt="Transistor BJT NPN, encapsulado TO-92">
+              <figcaption class="figcap">BC547 / 2N2222 — encapsulado TO-92</figcaption>
+            </figure>
+
+            <article class="description" aria-labelledby="titulo-descripcion-bjt">
+              <h4 id="titulo-descripcion-bjt">¿Qué es y para qué sirve?</h4>
+              <p>
+                El <strong>BJT NPN</strong> es un transistor de unión bipolar que controla una corriente
+                entre colector y emisor mediante una corriente más pequeña en la base. Es muy utilizado
+                como <em>conmutador</em> en circuitos digitales y como <em>amplificador</em> en etapas de señal.
+              </p>
+
+              <h5>Características clave</h5>
+              <ul>
+                <li>Terminales: <strong>Base (B)</strong>, <strong>Colector (C)</strong>, <strong>Emisor (E)</strong>.</li>
+                <li>Usos: conmutación digital, preamplificadores, drivers de pequeños relés.</li>
+                <li>Ejemplos: <em>BC547</em>, <em>2N2222</em>. Fácil de usar en protoboards.</li>
+              </ul>
+
+              <h5>Notas prácticas</h5>
+              <p class="small">
+                Para usarlo como conmutador, calcular la resistencia de base (Rb) según la corriente
+                de colector deseada. En saturación, Vce(sat) suele ser ≈ 0.1–0.3V; proteger siempre con
+                resistencias y considerar la disipación térmica.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- LED (card) -->
+        <article class="card product-card" aria-labelledby="titulo-led">
+          <figure class="card-image" role="img" aria-label="Imagen LED">
+            <img src="./img/diodosLed.png" alt="Diodo LED">
+            <!--<figcaption>LED estándar</figcaption>-->
+          </figure>
+          <div class="card-body">
+            <h4 id="titulo-led">LED (Light Emitting Diode)</h4>
+            <p>
+              Diodo que emite luz al ser atravesado por corriente en la dirección directa. Se usa como indicador,
+              señalización y en iluminación de baja potencia. Requiere siempre una resistencia limitadora de corriente.
+            </p>
+            <p class="small">Tensión directa típica: 1.8–3.3V (según color). Corriente típica de uso: 2–20 mA.</p>
+          </div>
+        </article>
+
+        <!-- MOSFET (card) -->
+        <article class="card product-card" aria-labelledby="titulo-mosfet">
+          <figure class="card-image" role="img" aria-label="Imagen MOSFET">
+            <img src="./img/mosfetN.png" alt="MOSFET canal N">
+            <!--<figcaption>MOSFET canal N (ejemplo)</figcaption>-->
+          </figure>
+          <div class="card-body">
+            <h4 id="titulo-mosfet">MOSFET Canal N</h4>
+            <p>
+              Dispositivo de efecto de campo utilizado para conmutación y control de potencia. En la versión de canal N,
+              conduce cuando la tensión de puerta (Vgs) supera el umbral. Muy empleado para controlar motores, fuentes y cargas.
+            </p>
+            <p class="small">Ventaja: alta impedancia de entrada y baja resistencia de conducción (Rds(on)) en estado activado.</p>
+          </div>
+        </article>
+
+      </div> <!-- /container -->
+    </section>
+
+    <!-- GLOSARIO (GRID) -->
+    <section id="glosario" class="glosario" aria-labelledby="glosario-title">
+      <div class="container">
+        <div class="subtitle">
+          <h2 id="glosario-title">Glosario técnico — materiales discretos</h2>
+          <p class="lead">Definiciones técnicas ampliadas para cada componente. Ideal para repaso y preparación de laboratorio.</p>
+        </div>
+
+        <div class="gloss-grid">
+          <!-- BJT Gloss -->
+          <article class="gloss-card" aria-labelledby="g-bjt">
+            <h3 id="g-bjt">BJT NPN — Transistor</h3>
+            <p>
+              El transistor BJT NPN es un amplificador y conmutador basado en tres capas semiconductor
+              (N-P-N). Una pequeña corriente de base controla una corriente mayor entre colector y emisor.
+              Se utiliza para amplificar señales analógicas y para conmutación en circuitos digitales.
+              En el laboratorio, es habitual calcular la resistencia de base para garantizar saturación
+              o la región activa según la aplicación. Ejemplos educativos: BC547, 2N2222.
+            </p>
+          </article>
+
+          <!-- LED Gloss -->
+          <article class="gloss-card" aria-labelledby="g-led">
+            <h3 id="g-led">LED — Diodo Emisor de Luz</h3>
+            <p>
+              El LED es un diodo semiconductor que emite luz cuando circula corriente en sentido directo.
+              Su funcionamiento se basa en la recombinación de electrones y huecos en la unión,
+              liberando energía en forma de fotones (luz). Cada color tiene una tensión directa característica.
+              En práctica, siempre se emplea una resistencia limitadora para evitar sobrecorriente y daño.
+            </p>
+          </article>
+
+          <!-- MOSFET Gloss -->
+          <article class="gloss-card" aria-labelledby="g-mosfet">
+            <h3 id="g-mosfet">MOSFET Canal N</h3>
+            <p>
+              El MOSFET de canal N es un transistor de efecto de campo donde la tensión aplicada a la puerta
+              controla la conducción entre drenador y fuente. Tiene alta impedancia en la puerta, lo que facilita
+              el control por microcontroladores sin consumir corriente significativa. Se usa ampliamente en
+              conmutación de potencia (motores, fuentes conmutadas) y en etapas de salida por su baja Rds(on).
+              Requiere atención al Vgs(th) y al disipador si la potencia es relevante.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO (formulario simple - Formspree) -->
+    <section id="contacto" class="contacto" aria-labelledby="contacto-title">
+      <div class="container">
+        <h2 id="contacto-title">Contacto</h2>
+        <p class="lead">Si querés consultarme sobre actividades, materiales o prácticas, escribime.</p>
+
+        <!-- Reemplazá el ACTION por tu endpoint de Formspree -->
+        <form id="contactForm" class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
+    </section>
+
   </main>
 
-  <footer class="site-footer">
-    <p>© 2025 — Curso de Electrónica • Materiales Discretos</p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      <p>© 2025 — Curso de Electrónica • Materiales Discretos — Entrega Previa</p>
+    </div>
   </footer>
 </body>
 </html>
